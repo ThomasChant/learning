@@ -1,9 +1,7 @@
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import refactor.Customer;
-import refactor.Movie;
-import refactor.Rental;
+import refactor.*;
 
 /**
  * @Description
@@ -21,9 +19,9 @@ public class CaculateTest {
     @Before
     public void setup(){
 
-         m = new Movie("阿凡达", 1);
-         m1 = new Movie("齐天大圣", 2);
-         m2 = new Movie("情书", 0);
+         m = new NewReleaseMovie("阿凡达", 1);
+         m1 = new ChildMovie("齐天大圣", 2);
+         m2 = new RegularMovie("情书", 0);
     }
     @Test
     public void test1(){

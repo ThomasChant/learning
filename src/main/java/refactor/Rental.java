@@ -7,6 +7,7 @@ package refactor;
  * @Version 1.0
  */
 public class Rental {
+
     private Movie _movie;
     private int _daysRented;
 
@@ -29,5 +30,14 @@ public class Rental {
 
     public void setDaysRented(int _daysRented) {
         this._daysRented = _daysRented;
+    }
+
+    public double getAmount() {
+        return getMovie().getCharge(getDaysRented());
+    }
+
+
+    public int getFrequentRenterPoints(){
+        return getMovie().getFrequentRenterPoints(getDaysRented());
     }
 }
