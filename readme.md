@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/ThomasChant/learning.svg?branch=myRefactor)](https://travis-ci.org/ThomasChant/learning)
