@@ -18,7 +18,6 @@ public class CaculateTest {
 
     @Before
     public void setup(){
-
          m = new NewReleaseMovie("阿凡达", 1);
          m1 = new ChildMovie("齐天大圣", 2);
          m2 = new RegularMovie("情书", 0);
