@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/ThomasChant/learning.svg?branch=myRefactor)](https://travis-ci.org/ThomasChant/learning)
+[![Build Status](https://travis-ci.org/ThomasChant/learning.svg?branch=master)](https://travis-ci.org/ThomasChant/learning)
