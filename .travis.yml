@@ -1,2 +1,42 @@
 language: java
 
+jdk:
+    - oraclejdk8
+
+# Only ci these branches
+branches:
+    only:
+        - master
+        - dev
+
+# services:
+#    - redis-server
+
+cache:
+    directories:
+        - $HOME/.gradle
+        - $HOME/.nvm
+        - $HOME/.npm
+        - $HOME/.bower
+        - $HOME/travis-phantomjs
+        - $HOME/build/learning/node_modules
+        - $HOME/build/learning/RentalBA/src/main/resources/static/script/lib
+
+before_install:
+#    - git submodule update --init --recursive
+    - nvm install 5.6.0
+    - nvm use 5.6.0
+    - npm install
+    - npm run bower -- install -F
+    - npm run gulp
+
+before_script:
+    - source travis-phantom-setup
+    - phantomjs --version
+
+script:
+    - gradle check -Dspring.profiles.active=travis -x classes
+#    - npm run karma -- start --single-run --browsers PhantomJS
+#    - gradle bootRun -x classes -Dspring.profiles.active=travis & # start web server
+#    - sleep 30 # waiting web server ready
+#    - npm run test /no-color
