@@ -26,7 +26,7 @@ public class CaculateTest {
     @Test
     public void test1(){
         {
-            Customer c = new Customer("李无");
+            Customer c = new Customer("李无1");
             Rental rental = new Rental(m, 3);
             Rental rental1 = new Rental(m1, 2);
             Rental rental2 = new Rental(m2, 10);
